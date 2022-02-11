@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcular_Dois_numeros</title>
+</head>
+
+<body>
+    <div class="glass"></div>
+    <div class="glass"></div>
+
+    <div class="main">
+        <h1 class="titulo">Tabuada</h1>
+
+        <button class="btn">Calcular</button>
+
+        <div class="inputs">
+            <input class="input" type="number">
+        </div>
+        <p class="tabuada">Tabuada</p>
+
+    </div>
+    <script>
+        var btn = document.querySelector('.btn');
+        var tabuada = document.querySelector('.tabuada');
+
+        btn.addEventListener('click', Tabuada)
+
+        function Tabuada() {
+            var input = document.querySelector('.input').value;
+
+            if (input === "") {
+                alert("Insira o Valor");
+                console.log("Insira o Valor")
+            } else {
+                console.clear();
+                console.log("Tabuada do " + input);
+                for (let i = 0; i <= 10; i++) {
+                     var resultado = parseFloat(input) * i;
+                     tabuada.innerText += [input + " * " + i + " = " + resultado];
+                     console.log(input + " * " + i + " = " + resultado)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

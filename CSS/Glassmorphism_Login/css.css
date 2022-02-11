@@ -1,0 +1,158 @@
+@import url('');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1a1a1a,#0d0d0d);
+}
+
+section .color{
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .color:nth-child(1){
+    top: -350px;
+    right: 200px;
+    width: 1000px;
+    height: 600px;
+    background: #4d0099;
+
+}
+
+section .color:nth-child(2){
+    bottom: -100px;
+    left: 100px;
+    width: 800px;
+    height: 700px;
+    background: #26004d;
+}
+section .color:nth-child(3){
+    bottom: -150px;
+    right: 0px;
+    width: 800px;
+    height: 600px;
+    background: #8c1aff;
+}
+section .color:nth-child(4){
+    top: -350px;
+    left: 0px;
+    width: 600px;
+    height: 800px;
+    background: #8c1aff;
+}
+
+.box{
+    position: relative;
+}
+
+.container{
+    position: relative;
+    width: 500px;
+    min-height: 600px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 25px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2 {
+    position: relative;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form .inputBox{
+    width: 100%;
+    margin-top: 20px;
+}
+.inputBox input{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form .inputBox input[type="submit"]{
+    background: #fff;
+    color: #666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.forget{
+    margin-top: 30px;
+    color: #fff;
+}
+.forget a{
+    color: #fff;
+    text-decoration: none;
+}
+.forget a:hover{
+    transition: 2s;
+    
+}
+
+.form .inputBox input{
+    background-color: #fff;
+    color: #0d0d0d;
+}
+
+.form .inputBox input:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+.form .inputBox input:hover:after{
+    box-shadow: 0px 0px 5px #ffffff;
+    background-color: #8c1aff;
+    color: #fff;
+    border: solid 1px #fff;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

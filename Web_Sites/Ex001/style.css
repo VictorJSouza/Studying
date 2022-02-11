@@ -1,0 +1,27 @@
+img{
+    position: absolute;
+    width: 50%;
+    z-index: 0;
+}
+
+main{
+    background: white;
+    max-width: 50%;
+    padding: 5em;
+    height: 40em;
+}
+
+#navbar a{
+    margin-right: 10em;
+
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#section_title, h1 p{
+    position: relative;
+    font-size: 1.5em;
+    max-width: 90%;
+    z-index: 10;
+    
+}

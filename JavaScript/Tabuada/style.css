@@ -1,0 +1,95 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+    overflow: hidden;
+}
+
+.glass {
+    position: absolute;
+    background-color: blueviolet;
+    filter: blur(150px);
+}
+
+.glass:nth-child(1) {
+    bottom: 0px;
+    width: 600px;
+    height: 300px;
+}
+
+.glass:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    padding: 10%;
+    margin: 5% 5% 5%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.titulo {
+    margin-top: 3%;
+    margin-right: 16%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    font: 50px Montserrat, sans-serif;
+}
+
+.inputs input {
+    width: 50%;
+    padding: 1%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    outline: 0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inputs {
+    display: block;
+    text-align: left;
+    font-family: Montserrat;
+}
+
+.input2 {
+    margin-top: 50px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 1.5em;
+    color: white;
+    transition: background 500ms, color 500ms;
+    margin-right: 50px;
+    padding: 5%;
+    text-align: center;
+}
+
+.btn:hover {
+    background: white;
+    color: blueviolet;
+}
