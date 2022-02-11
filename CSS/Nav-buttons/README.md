@@ -1,5 +1,5 @@
 # Studying
 Just Studying
 
-Contact Page
+Cool buttons
 <img src="/CSS/Nav-buttons/Nav-buttons.JPG">

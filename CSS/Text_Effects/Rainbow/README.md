@@ -1,5 +1,5 @@
 # Studying
 Just Studying
 
-Contact Page
+Just a Rainbow...
 <img src="/CSS/Text_Effects/Rainbow/Rainbow.gif">

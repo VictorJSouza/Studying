@@ -1,5 +1,5 @@
 # Studying
 Just Studying
 
-Contact Page
+Authentic Page
 <img src="/CSS/Cadastro/Cadastro.JPG">
