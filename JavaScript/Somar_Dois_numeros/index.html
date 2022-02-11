@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/JavaScript/Calcular_Dois_numeros/Js.js"></script>
+    <title>Calcular_Dois_numeros</title>
+</head>
+
+<body>
+    <div class="glass"></div>
+    <div class="glass"></div>
+
+    <div class="main">
+        <h1 class="titulo">Calculadora</h1>
+
+        <button class="btn">Calcular</button>
+
+        <div class="inputs">
+            <input class="input1" type="number">
+            <input class="input2" type="number">
+        </div>
+
+    </div>
+    <script>
+        var btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', Calcular)
+
+        function Calcular() {
+            var input1 = document.querySelector('.input1').value;
+            var input2 = document.querySelector('.input2').value;
+
+             if (input1 == "" && input2 == "") {
+                 alert("Insira os Números")
+                 return;
+             } else if (input1 == "") {
+                 alert("Faltando o Primeiro Número")
+                 return;
+             } else if (input2 == "") {
+                 alert("Faltando o Segundo Número")
+                 return;
+             }
+            var resultadoConta = parseFloat(input1) + parseFloat(input2)
+            alert("Resultado: " + resultadoConta + "\n Operação: " + input1 + "+" + input2 + "=" + resultadoConta)
+        }
+    </script>
+</body>
+
+</html>

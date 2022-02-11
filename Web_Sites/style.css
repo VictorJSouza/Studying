@@ -1,0 +1,22 @@
+body{
+    background: #333;
+    background-image: url();
+}
+
+main{
+    background: white;
+    max-width: 50%;
+    padding: 5em;
+}
+
+#navbar a{
+    margin-right: 10em;
+
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#section_title{
+    font-size: 1.5em;
+    max-width: 90%;
+}
