@@ -1,2 +1,2 @@
 # Studying
-Just Studying
+Just Studying...
