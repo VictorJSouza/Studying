@@ -1,7 +1,7 @@
 ## Solution Page
 
 Layout Desk
-<img src="/Web_Sites/Solution_page/img/Web-Sites-Solution_page_desk.png">
+<img src="/Web_Sites/Solution_page/Solution-page_desk.png">
 
 Layout Mobile
-<img src="/Web_Sites/Solution_page/img/Web-Sites-Solution_page_mobile.png">
+<img src="/Web_Sites/Solution_page/Solution-page_mobile.png">
