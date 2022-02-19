@@ -1,10 +1,17 @@
-*{
+* {
     margin: 0;
     border: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-.welcome-section{
+div, h2{
+    animation: opacity 4s;
+}
+p{
+    font-weight: 600;
+}
+
+.welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,49 +19,81 @@
     color: white;
     padding: 8%;
     text-align: center;
+    animation: commingSon 3s;
 }
-.welcome-section h1{
+@keyframes commingSon{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.welcome-section h1 {
     font-size: 2em;
     margin-bottom: 2%;
 }
-.welcome-section button{
+
+.welcome-section button {
     background-color: rgb(34, 34, 34);
     border: 1px solid white;
     margin: 1% 0% 0% 0%;
     padding: 1%;
     width: 20%;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
 }
-.welcome-section button a{
+.welcome-section button:hover {
+    background-color: #333;
+    transform: scale(110%);
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 40px gray;
+}
+
+.welcome-section button a {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
 }
-.web-application-section h2{
+
+.web-application-section h2 {
     color: #333;
     text-align: center;
     padding: 2%;
 }
-.web-application-text{
+
+.web-application-text {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.web-application-text p{
+
+.web-application-text p {
     width: 30%;
     padding-bottom: 2%;
     text-align: center;
 }
-.web-application-cards{
+
+.web-application-cards {
     background-color: #333;
     padding: 5%;
 }
-.cards{
+
+.cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 5%;
 }
-.cards-development{
+
+.cards-development {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,15 +101,18 @@
     background-color: white;
     border-radius: 25px;
 }
-.cards-development-text p{
+
+.cards-development-text p {
     padding: 10%;
     text-align: center;
 }
-.cards-development-text h3{
+
+.cards-development-text h3 {
     margin-top: 10%;
     text-align: center;
 }
-.cards-mobile{
+
+.cards-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,15 +120,18 @@
     background-color: white;
     border-radius: 25px;
 }
-.cards-mobile p{
+
+.cards-mobile p {
     padding: 10%;
     text-align: center;
 }
-.cards-mobile h3{
+
+.cards-mobile h3 {
     margin-top: 10%;
     text-align: center;
 }
-.cards-tech{
+
+.cards-tech {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,55 +139,133 @@
     background-color: white;
     border-radius: 25px;
 }
-.cards-tech p{
+
+.cards-tech p {
     padding: 10%;
     text-align: center;
 }
-.cards-tech h3{
+
+.cards-tech h3 {
     margin-top: 10%;
     text-align: center;
 }
-.web-application-cards img{
+
+.web-application-cards img {
     width: 100%;
 }
-.digital-needs-text{
+
+.digital-needs-text {
     padding: 5%;
     text-align: center;
 }
-.digital-needs-text h2{
+
+.digital-needs-text h2 {
     color: #333;
     margin-bottom: 2%;
 }
-.digital-needs-footer{
+
+.digital-needs-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     color: white;
 }
-.contact-us{
+
+.contact-us {
     background-color: #2690D4;
     padding: 5%;
 }
-.digital-needs-footer h3{
+
+.digital-needs-footer h3 {
     font-size: 1.5em;
     margin-bottom: 5%;
 }
-.about-company{
+
+.about-company {
     background-color: #333;
     padding: 5%;
 }
-.footer{
+
+.footer {
     padding: 2%;
     background-color: black;
     color: white;
     font-weight: 600;
     font-size: 1.1em;
 }
-.footer-text{
+
+.footer-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
 }
-.footer-text a{
+
+.footer-text a {
     color: #2690D4;
+}
+
+/*////////////////////////////////// Responsive ////////////////////////////////// */
+@media (max-width: 425px) {
+    body p {
+        font-size: 0.8em;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.5em;
+    }
+
+    .welcome-section button {
+        width: 100%;
+        margin-top: 3%;
+        font-size: 0.7em;
+    }
+
+    .web-application-section h2 {
+        font-size: 1.2em;
+        margin-top: 5%;
+    }
+
+    .web-application-section p {
+        padding: 2%;
+        margin-bottom: 5%;
+        width: 100%;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-development-text,
+    .cards-mobile-text,
+    .cards-tech-text {
+        margin: 5%;
+    }
+
+    .cards .cards-development,
+    .cards-mobile,
+    .cards-tech {
+        border-radius: 0%;
+    }
+
+    .cards div {
+        margin-bottom: 10%;
+    }
+
+    .digital-needs-text {
+        padding: 10%;
+    }
+
+    .digital-needs-text h2 {
+        font-size: 1.2em;
+    }
+
+    .digital-needs-footer h3 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .digital-needs-footer p {
+        width: 100%;
+    }
 }
