@@ -1,7 +1,7 @@
 # Design
 
 ## Desk
-<img src="Studying/Web_Sites/Design/Design_desk.png">
+<img src="Web_Sites/Design/Design_desk.png">
 
 ## Mobile
-<img src="Studying/Web_Sites/Design/Design_mobile.png">
+<img src="Web_Sites/Design/Design_mobile.png">
