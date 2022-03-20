@@ -1,0 +1,179 @@
+.table-rendimento{
+    font-size: 1rem;
+    margin: 2% 5% 2% 2%;
+}
+.table-rendimento th{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.rendimento{
+    background-color: blueviolet;
+}
+.table-despesas{
+    font-size: 1rem;
+    margin: 2% 5% 2% 2%;
+}
+.table-despesas th{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.despesas{
+    background-color: blueviolet;
+}
+.valor input{
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+.switch-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch-button .btn{
+    width: 10%;
+}
+.switch-button .btn{
+    width: 10%;
+    border: none;
+}
+.switch-button .btn:hover{
+    background-color: transparent;
+    fill: blueviolet;
+}
+.switch-button .btn svg{
+    background-color: transparent;
+    fill: white;
+    border: none;
+}
+.switch-button .btn svg:hover{
+    fill: blueviolet;
+}
+.button-plus{
+    display: flex;
+    justify-content: flex-end;
+}
+.button-plus svg{
+    fill: #33ff33;
+    transition: 300ms ease-in-out;
+    border-radius: 100%;
+}
+.button-plus svg:hover{
+    background-color:white;
+    fill: #212529;
+    border: 1px solid #33ff33;
+    transform: scale(120%) rotate(180deg);
+}
+.button-plus button{
+    color: #33ff33;
+    background-color: #212529;
+}
+.modal-add-despesa{
+    background-color: white;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 10px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.button button{
+    margin-right: 0.5%;
+}
+tbody{
+    text-align: center;
+}
+.button-edit{
+    display: flex;
+    justify-content: flex-end;
+}
+.button-edit button{
+    background-color: #212529;
+    transition: 200ms ease-in-out;
+}
+.button-edit button:hover{
+    transform: scale(110%);
+    border: 1px solid yellow;
+}
+.button-edit svg{
+    fill: orange;
+
+}
+.alert{
+    color: red;
+    border: 1px solid red;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5%;
+}
+.button-refresh button{
+    background-color: #212529;
+    outline: none;
+}
+.button-refresh svg{
+    background-color: #212529;
+    fill: white;
+    transition: 200ms ease-in-out;
+}
+.button-refresh svg:hover{
+    transform: rotate(360deg) scale(110%);
+}
+.despesas-td{
+    text-align: center;
+    width: 100%;
+}
+.despesas-td button{
+    width: 100%;
+}
+.despesas-td svg{
+    width: 100%;
+    fill: white;
+    transition: 200ms ease-in-out;
+}
+.despesas-td button:hover svg {
+    fill: red;
+}
+#deletar{
+    border: 1px solid red;
+    background-color: red;
+}
+#deletar:hover{
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+.button-voltar{
+    display: flex;
+    justify-content: center;
+}
+.editar-despesa input{
+    width: 100%;
+}
+
+.buttons-editDespesa{
+    display: flex;
+    justify-content: center;
+}
+.buttons-editDespesa button{
+    margin-right: 1%;
+}
+.editar-despesa-table input{
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: black;
+    outline: none;
+}
+
+#canvas{
+    display: block;
+    width: 400px;
+    height: 400px;
+}
