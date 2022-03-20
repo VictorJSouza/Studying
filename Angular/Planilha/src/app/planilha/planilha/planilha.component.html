@@ -1,0 +1,197 @@
+<div *ngIf="tabela">
+  <div class="table-rendimento">
+    <table class="table table-dark table-hover table-bordered">
+      <thead class="rendimento">
+        <tr>
+          <th scope="col">Rendimento</th>
+          <th scope="col">Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dia 05</td>
+          <td class="valor"><input type="number" [(ngModel)]="value1" step="0.01" name="quantity" min="0.01"></td>
+        </tr>
+        <tr>
+          <td>Dia 15</td>
+          <td class="valor"><input type="number" [(ngModel)]="value2" step="0.01" name="quantity" min="0.01"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-despesas">
+    <div class="buttons">
+      <div class="button-refresh">
+        <button (click)="refreshData()" type="button" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"
+            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+          </svg>
+        </button>
+      </div>
+      <div class="button-edit">
+        <button (click)="editDespensaModal()" id="editar" type="button" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pencil-square"
+            viewBox="0 0 16 16">
+            <path
+              d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+            <path fill-rule="evenodd"
+              d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+          </svg>
+        </button>
+      </div>
+      <div class="button-plus">
+        <div class="button-plus">
+          <button (click)="addDespesaModal()" type="button" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="bi bi-plus-square-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <table class="table table-dark table-hover table-bordered">
+      <thead class="despesas">
+        <tr>
+          <th scope="col">Despesas</th>
+          <th scope="col">Dia 05</th>
+          <th scope="col">Dia 15</th>
+          <th scope="col">#</th>
+        </tr>
+      </thead>
+      <tr class="despesas-td" *ngFor="let item of list; let i = index">
+        <td class="valor">
+          <div class="switch-button">
+            {{item.name}}
+            <button (click)="switchDespesas(i, item.name, item.value1, item.value2)" class="btn btn-outline-warning">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
+              </svg>
+            </button>
+          </div>
+        </td>
+        <td class="valor">{{item.value1}}</td>
+        <td class="valor">{{item.value2}}</td>
+        <td><button (click)="deleteDespesa(item.id, item.name, item.value1, item.value2)" id="deletar" type="button"
+            class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+            </svg></button>
+        </td>
+      </tr>
+      <tbody>
+        <tr *ngIf="total" class="bg-info">
+          <td>Total de despesas</td>
+          <td>{{totalDespesasDia05}}</td>
+          <td>{{totalDespesasDia15}}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Saldo após pagamento</td>
+          <td [class]="saldoAposColor1" class="valor">{{saldoApos05}}</td>
+          <td [class]="saldoAposColor2" class="valor">{{saldoApos15}}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="modalAddDespesa" class="modal-add-despesa">
+  <h1>Adicionar despesa</h1>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nome da despesa</span>
+    </div>
+    <input #despesaNome type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <p class="alert" *ngIf="errorNome">Campos não preenchidos</p>
+  <div class="input-group mb-1">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Dia 05</span>
+    </div>
+    <input #despesavalor1 type="number" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Dia 15</span>
+    </div>
+    <input #despesavalor2 type="number" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="button">
+    <button (click)="addDespesa(despesaNome.value, despesavalor1.value, despesavalor2.value)" type="button"
+      class="btn btn-success">Adicionar</button>
+    <button (click)="voltar()" type="button" class="btn btn-danger">Voltar</button>
+  </div>
+</div>
+
+
+<div *ngIf="modalEditDespesa" class="modal-add-despesa">
+  <h1>Editar Despesa</h1>
+  <div class="editar-despesa" *ngIf="!editDespesa">
+    <p>Escolha a despesa para editar</p>
+    <div *ngFor="let item of list; let i = index">
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Escolha</th>
+            <th scope="col">Despesa Nome</th>
+            <th scope="col">Dia 05</th>
+            <th scope="col">Dia 15</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td><input (click)="editarDespesa(i, item.name, item.value1, item.value2)" type="radio" class="btn-check"
+              name="btnradio" id="btnradio1" autocomplete="off"></td>
+          <td class="valor">{{item.name}}</td>
+          <td class="valor">{{item.value1}}</td>
+          <td class="valor">{{item.value2}}</td>
+        </tbody>
+      </table>
+    </div>
+    <div class="button-voltar">
+      <button (click)="voltar()" type="button" class="btn btn-danger">Voltar</button>
+    </div>
+  </div>
+
+
+  <div *ngIf="editDespesa" class="editar-despesa-table">
+    <p>Edite a despesa</p>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Escolha</th>
+          <th scope="col">Despesa Nome</th>
+          <th scope="col">Dia 05</th>
+          <th scope="col">Dia 15</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td>#</td>
+        <td><input [(ngModel)]="editName" type="text"></td>
+        <td><input [(ngModel)]="editValue1" type="text"></td>
+        <td><input [(ngModel)]="editValue2" type="text"></td>
+      </tbody>
+      <p class="alert" *ngIf="errorNome">Campos não alterados</p>
+    </table>
+    <div class="buttons-editDespesa">
+      <button (click)="salvarDespesa()" type="button" class="btn btn-outline-success">Salvar</button>
+      <button (click)="voltarDespesa()" type="button" class="btn btn-danger">Voltar</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="graficos">
+  <p>graficos</p>
+</div>
